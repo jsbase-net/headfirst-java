@@ -1,19 +1,19 @@
 package net.netbase;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import net.netbase.entities.User;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws JsonProcessingException {
         // Press Alt+Enter with your caret at the highlighted text to see how
         // IntelliJ IDEA suggests fixing it.
         System.out.printf("Hello and welcome!");
-
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        String userJsonString = " {\r\n    \"id\": 7,\r\n    \"email\": \"michael.lawson@reqres.in\",\r\n    \"firstName\": \"Michael\",\r\n    \"lastName\": \"Lawson\",\r\n    \"avatar\": \"https://reqres.in/img/faces/7-image.jpg\"\r\n}";
+        Class<User> cls = User.class;
+        User u = User.<User>fromJsonClass(userJsonString, cls);
+        System.out.printf(u.getId() + u.getFirstName() + u.getLastName() + u.getEmail() + u.getAvatar());
+        System.out.println(u.toJsonString());
     }
 }
