@@ -4,11 +4,8 @@
 
 ### Days 1
 
-- [ ] Install Java
-- [ ] Common data types
-- [ ] Loop
-- [ ] Read and Write JSON File
-- [ ] Fetch data from internet and save to a json file
+- [x] Install Java
+- [x] Common data types
 
 1. List of users
 
@@ -21,3 +18,19 @@
     "avatar": "https://reqres.in/img/faces/7-image.jpg"
 }
 ```
+
+### Days 2
+
+- [ ] Config Jetbrains build sdk : https://www.jetbrains.com/help/idea/sdk.html#set-up-jdk
+- [ ] Use Java to fetch external resource from internet
+- [ ] File I/O
+
+```sh
+java -jar headfirst.jar
+```
+
+1. Read/Write text files
+
+- Write a small program to fetch gold data from internet, read url from config file
+
+2. Write a software to generate vote report

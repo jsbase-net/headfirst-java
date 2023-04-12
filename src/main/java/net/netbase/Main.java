@@ -2,6 +2,7 @@ package net.netbase;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import net.netbase.entities.User;
+import net.netbase.helpers.CurrentWorkDirectoryHelper;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
@@ -15,5 +16,6 @@ public class Main {
         User u = User.<User>fromJsonClass(userJsonString, cls);
         System.out.printf(u.getId() + u.getFirstName() + u.getLastName() + u.getEmail() + u.getAvatar());
         System.out.println(u.toJsonString());
+        System.out.println((CurrentWorkDirectoryHelper.currentWorkingDirectory()));
     }
 }

@@ -25,6 +25,7 @@ target/
 /nbproject/private/
 /nbbuild/
 /dist/
+/out/
 /nbdist/
 /.nb-gradle/
 build/
@@ -34,5 +35,6 @@ build/
 ### VS Code ###
 .vscode/
 
+###
 ### Mac OS ###
 .DS_Store
