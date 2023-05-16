@@ -1,5 +1,16 @@
 # Headfirst Java
 
+## Devtools
+
+- [Install Maven]()
+- [Build and run a java SE Application with Maven](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Maven_SE/Maven.html)
+
+```sh
+mvn install
+mvn clean package
+mvn exec:java -Dexec.mainClass="net.netbase.Main"
+```
+
 ## Roadmap
 
 ### Days 1

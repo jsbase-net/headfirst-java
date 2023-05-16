@@ -13,6 +13,7 @@ public class BaseEntity {
     }
 
     public static <T> T fromJsonClass (String value, Class<T> type) throws JsonProcessingException {
+
         ObjectMapper objectMapper = new ObjectMapper();
         return objectMapper.readValue(value, type);
     }
