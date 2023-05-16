@@ -3,9 +3,42 @@ package net.netbase.lessions;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import net.netbase.entities.Example;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Chapter2 {
+
+    public static boolean isPrime(int number) {
+        if (number <= 1) return false;
+        if (number == 2) return true;
+        if (number % 2 == 0) return false;
+        for (int i = 3; i < number; i++) {
+            if (number % i == 0) return false;
+        }
+        return true;
+    }
+
+    public static ArrayList<Number> getPrimeNumbers(int length) {
+        ArrayList<Number> primeNumbers = new ArrayList<Number>();
+
+        // maximum 100 primes
+        if (length == 0) {
+            return primeNumbers;
+        }
+        int totalPrimes = 1;
+        primeNumbers.add(2);
+        int number = 3;
+        while (totalPrimes < length && totalPrimes < 100) {
+            if (isPrime(number)) {
+                primeNumbers.add(number);
+                totalPrimes += 1;
+            }
+            number += 2;
+        }
+        System.out.print(primeNumbers);
+        return primeNumbers;
+    }
+
     public static void learn() {
         try {
             // data types
